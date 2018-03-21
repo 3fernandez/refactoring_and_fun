@@ -11,7 +11,7 @@ The objective of this kata is to practice refactoring. This kata motivates the n
 Also known as a [preparatory refactoring](http://martinfowler.com/articles/workflowsOfRefactoring/#preparatory).
 
 ## Good solutions
-* Refactor the exisiting code to be in a clean and understandable structure
+* Refactor the existing code to be in a clean and understandable structure
 * The code should be easily understandable
 * All tests shoult be passing (including the pending ones)
 * Be creative and have fun. Show us your coding style (how does good code look like for you?)
