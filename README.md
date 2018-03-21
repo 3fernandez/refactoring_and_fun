@@ -1,9 +1,6 @@
 Gilded Rose Kata in Ruby
 ========================
 
-The Gilded Rose Kata in Ruby following the style from the [Sandi Metz](https://twitter.com/sandimetz)
-presentation [All the Little Things](https://www.youtube.com/watch?v=8bZh5LMaSmE).
-
 The objective of this kata is to practice refactoring. This kata motivates the need for refactoring as follows:
 
 * The implementation is spaghetti code, and difficult to glean context.
@@ -13,9 +10,17 @@ The objective of this kata is to practice refactoring. This kata motivates the n
 * Consider using the passing tests to refactor the code to make it more habitable before implementing new functionality.
 Also known as a [preparatory refactoring](http://martinfowler.com/articles/workflowsOfRefactoring/#preparatory).
 
+## Good solutions
+* Refactor the exisiting code to be in a clean and understandable structure
+* The code should be easily understandable
+* All tests shoult be passing (including the pending ones)
+* Be creative. Show us your coding style (how does good code look like for you?)
+
 ## Where to Start
 
-Begin refactoring the existing `lib/gilded_rose.rb` class.
+* Make a copy of this repository (no fork please)
+* Begin refactoring the existing `lib/gilded_rose.rb` class.
+* Send us the solution
 
 ## Original Requirements
 
