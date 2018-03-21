@@ -14,13 +14,14 @@ Also known as a [preparatory refactoring](http://martinfowler.com/articles/workf
 * Refactor the exisiting code to be in a clean and understandable structure
 * The code should be easily understandable
 * All tests shoult be passing (including the pending ones)
-* Be creative. Show us your coding style (how does good code look like for you?)
+* Be creative and have fun. Show us your coding style (how does good code look like for you?)
+* Try to have small and descriptive commits
 
 ## Where to Start
 
-* Make a copy of this repository (no fork please)
+* Make a copy of this repository (no forks please)
 * Begin refactoring the existing `lib/gilded_rose.rb` class.
-* Send us the solution
+* Send us the link to the solution
 
 ## Original Requirements
 
