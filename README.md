@@ -21,6 +21,7 @@ Also known as a [preparatory refactoring](http://martinfowler.com/articles/workf
 
 * Make a copy of this repository (no forks please)
 * Begin refactoring the existing `lib/gilded_rose.rb` class.
+* Make the pending tests pass
 * Send us the link to the solution
 
 ## Original Requirements
