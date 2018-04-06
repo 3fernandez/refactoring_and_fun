@@ -6,3 +6,4 @@ gem "rubocop"
 gem "guard"
 gem "guard-rspec"
 gem "guard-rubycritic"
+gem 'terminal-notifier-guard'
