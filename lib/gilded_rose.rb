@@ -13,6 +13,10 @@ class GildedRose
 
 
   def tick
+    if @name == AGED_BRIE
+      return aged_brie
+    end
+
     if @name != AGED_BRIE and @name != BACKSTAGE_PASSES
       if @quality > 0
         if @name != SULFURAS
@@ -55,6 +59,17 @@ class GildedRose
           @quality = @quality + 1
         end
       end
+    end
+  end
+
+  def aged_brie
+    @days_remaining = @days_remaining - 1
+    return if @quality >= 50
+
+    @quality = @quality + 1
+
+    if @days_remaining <= 0 and @quality < 50
+      @quality = @quality + 1
     end
   end
 end
