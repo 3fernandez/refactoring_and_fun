@@ -1,3 +1,5 @@
+notification :terminal_notifier if `uname` =~ /Darwin/
+
 guard :rspec, cmd: "bundle exec rspec" do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
