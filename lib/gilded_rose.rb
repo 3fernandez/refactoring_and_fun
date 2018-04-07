@@ -11,6 +11,7 @@ class GildedRose
   AGED_BRIE       = "Aged Brie"
   SULFURAS        = "Sulfuras, Hand of Ragnaros"
   NORMAL          = "Normal Item"
+  CONJURED        = "Conjured Mana Cake"
 
 
   def tick
@@ -28,6 +29,10 @@ class GildedRose
 
     if @name == NORMAL
       return normal
+    end
+
+    if @name == CONJURED
+      return conjured
     end
 
     if @name != AGED_BRIE and @name != BACKSTAGE_PASS
@@ -110,6 +115,20 @@ class GildedRose
 
       if @days_remaining <= 0
         @quality = @quality - 1
+      end
+    end
+  end
+
+  def conjured
+    @days_remaining = @days_remaining - 1
+
+    if @quality == 0
+      return
+    else
+      @quality = @quality - 2
+
+      if @days_remaining <= 0
+        @quality = @quality - 2
       end
     end
   end
