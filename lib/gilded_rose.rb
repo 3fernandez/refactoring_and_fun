@@ -13,26 +13,38 @@ class GildedRose
   NORMAL          = "Normal Item"
   CONJURED        = "Conjured Mana Cake"
 
-
   def tick
-    if @name == AGED_BRIE
-      return aged_brie
-    end
+    # if @name == AGED_BRIE
+    #   return aged_brie
+    # end
+    #
+    # if @name == BACKSTAGE_PASS
+    #   return backstage_pass
+    # end
+    #
+    # if @name == SULFURAS
+    #   return
+    # end
+    #
+    # if @name == NORMAL
+    #   return normal
+    # end
+    #
+    # if @name == CONJURED
+    #   return conjured
+    # end
 
-    if @name == BACKSTAGE_PASS
-      return backstage_pass
-    end
-
-    if @name == SULFURAS
-      return
-    end
-
-    if @name == NORMAL
+    case @name
+    when NORMAL
       return normal
-    end
-
-    if @name == CONJURED
+    when AGED_BRIE
+      return aged_brie
+    when BACKSTAGE_PASS
+      return backstage_pass
+    when CONJURED
       return conjured
+    else
+      return
     end
   end
 
