@@ -21,6 +21,10 @@ class GildedRose
       return backstage_passes
     end
 
+    if @name == SULFURAS
+      return
+    end
+
     if @name != AGED_BRIE and @name != BACKSTAGE_PASS
       if @quality > 0
         if @name != SULFURAS
