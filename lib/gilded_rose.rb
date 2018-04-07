@@ -17,6 +17,10 @@ class GildedRose
       return aged_brie
     end
 
+    if @name == BACKSTAGE_PASSES
+      return backstage_passes
+    end
+
     if @name != AGED_BRIE and @name != BACKSTAGE_PASSES
       if @quality > 0
         if @name != SULFURAS
@@ -69,6 +73,20 @@ class GildedRose
     @quality = @quality + 1
 
     if @days_remaining <= 0 and @quality < 50
+      @quality = @quality + 1
+    end
+  end
+
+  def backstage_passes
+    @days_remaining = @days_remaining - 1
+    return if @quality >= 50
+    return @quality = 0 if @days_remaining < 0
+
+    @quality = @quality + 1
+    if @days_remaining <= 10
+      @quality = @quality + 1
+    end
+    if @days_remaining < 5
       @quality = @quality + 1
     end
   end
