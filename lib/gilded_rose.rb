@@ -20,7 +20,7 @@ class GildedRose
     end
 
     if @name == BACKSTAGE_PASS
-      return backstage_passes
+      return backstage_pass
     end
 
     if @name == SULFURAS
@@ -91,7 +91,7 @@ class GildedRose
     end
   end
 
-  def backstage_passes
+  def backstage_pass
     @days_remaining = @days_remaining - 1
     return if @quality >= 50
     return @quality = 0 if @days_remaining < 0
