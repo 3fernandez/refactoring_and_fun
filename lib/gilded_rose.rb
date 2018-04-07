@@ -34,50 +34,6 @@ class GildedRose
     if @name == CONJURED
       return conjured
     end
-
-    if @name != AGED_BRIE and @name != BACKSTAGE_PASS
-      if @quality > 0
-        if @name != SULFURAS
-          @quality = @quality - 1
-        end
-      end
-    else
-      if @quality < 50
-        @quality = @quality + 1
-        if @name == BACKSTAGE_PASS
-          if @days_remaining < 11
-            if @quality < 50
-              @quality = @quality + 1
-            end
-          end
-          if @days_remaining < 6
-            if @quality < 50
-              @quality = @quality + 1
-            end
-          end
-        end
-      end
-    end
-    if @name != SULFURAS
-      @days_remaining = @days_remaining - 1
-    end
-    if @days_remaining < 0
-      if @name != AGED_BRIE
-        if @name != BACKSTAGE_PASS
-          if @quality > 0
-            if @name != SULFURAS
-              @quality = @quality - 1
-            end
-          end
-        else
-          @quality = @quality - @quality
-        end
-      else
-        if @quality < 50
-          @quality = @quality + 1
-        end
-      end
-    end
   end
 
   def aged_brie
