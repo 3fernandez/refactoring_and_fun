@@ -14,33 +14,13 @@ class GildedRose
   CONJURED        = "Conjured Mana Cake"
 
   def tick
-    # if @name == AGED_BRIE
-    #   return aged_brie
-    # end
-    #
-    # if @name == BACKSTAGE_PASS
-    #   return backstage_pass
-    # end
-    #
-    # if @name == SULFURAS
-    #   return
-    # end
-    #
-    # if @name == NORMAL
-    #   return normal
-    # end
-    #
-    # if @name == CONJURED
-    #   return conjured
-    # end
-
     case @name
-    when NORMAL
-      return normal
     when AGED_BRIE
       return aged_brie
     when BACKSTAGE_PASS
       return backstage_pass
+    when NORMAL
+      return normal
     when CONJURED
       return conjured
     else
@@ -53,10 +33,7 @@ class GildedRose
     return if @quality >= 50
 
     @quality = @quality + 1
-
-    if @days_remaining <= 0 and @quality < 50
-      @quality = @quality + 1
-    end
+    @quality = @quality + 1 if @days_remaining <= 0 and @quality < 50
   end
 
   def backstage_pass
