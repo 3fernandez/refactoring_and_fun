@@ -42,12 +42,8 @@ class GildedRose
     return @quality = 0 if @days_remaining < 0
 
     @quality = @quality + 1
-    if @days_remaining <= 10
-      @quality = @quality + 1
-    end
-    if @days_remaining < 5
-      @quality = @quality + 1
-    end
+    @quality = @quality + 1 if @days_remaining <= 10
+    @quality = @quality + 1 if @days_remaining < 5
   end
 
   def normal
