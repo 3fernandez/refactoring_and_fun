@@ -7,7 +7,7 @@ class GildedRose
     @quality = quality
   end
 
-  BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert"
+  BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert"
   AGED_BRIE       = "Aged Brie"
   SULFURAS        = "Sulfuras, Hand of Ragnaros"
 
@@ -17,11 +17,11 @@ class GildedRose
       return aged_brie
     end
 
-    if @name == BACKSTAGE_PASSES
+    if @name == BACKSTAGE_PASS
       return backstage_passes
     end
 
-    if @name != AGED_BRIE and @name != BACKSTAGE_PASSES
+    if @name != AGED_BRIE and @name != BACKSTAGE_PASS
       if @quality > 0
         if @name != SULFURAS
           @quality = @quality - 1
@@ -30,7 +30,7 @@ class GildedRose
     else
       if @quality < 50
         @quality = @quality + 1
-        if @name == BACKSTAGE_PASSES
+        if @name == BACKSTAGE_PASS
           if @days_remaining < 11
             if @quality < 50
               @quality = @quality + 1
@@ -49,7 +49,7 @@ class GildedRose
     end
     if @days_remaining < 0
       if @name != AGED_BRIE
-        if @name != BACKSTAGE_PASSES
+        if @name != BACKSTAGE_PASS
           if @quality > 0
             if @name != SULFURAS
               @quality = @quality - 1
