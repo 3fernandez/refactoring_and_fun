@@ -127,7 +127,7 @@ RSpec.describe GildedRose do
 
       gilded_rose.tick
 
-      expect(gilded_rose).to have_attributes(days_remaining: 10, quality: 11)
+      expect(gilded_rose).to have_attributes(days_remaining: 10, quality: 12)
     end
 
     it "long before sell date at max quality" do
