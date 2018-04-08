@@ -56,15 +56,9 @@ class GildedRose
 
   def conjured
     @days_remaining = @days_remaining - 1
+    return if @quality == 0
 
-    if @quality == 0
-      return
-    else
-      @quality = @quality - 2
-
-      if @days_remaining <= 0
-        @quality = @quality - 2
-      end
-    end
+    @quality = @quality - 2
+    @quality = @quality - 2 if @days_remaining <= 0
   end
 end
