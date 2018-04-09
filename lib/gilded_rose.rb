@@ -27,6 +27,8 @@ class GildedRose
     end
   end
 
+  private
+
   def aged_brie
     decrease_days_remaining_by_one
     return if @quality >= 50
