@@ -44,7 +44,7 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Updated <time class='js-timeago' datetime='2018-04-09 02:41:44 -0300'>2018-04-09 02:41:44 -0300</time>
+          Updated <time class='js-timeago' datetime='2018-04-09 02:44:07 -0300'>2018-04-09 02:44:07 -0300</time>
         
       </span>
     </div>
@@ -65,12 +65,12 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">71</span><small> lines of codes</small></div>
+              <div><span class="metric">73</span><small> lines of codes</small></div>
               <div><span class="metric">9</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
               <div><span class="metric">5.0</span><small> complexity/method</small></div>
-              <div><span class="metric">20</span><small> churn</small></div>
+              <div><span class="metric">21</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
               <div><span class="metric">44.6</span><small> complexity</small></div>
@@ -123,6 +123,8 @@
     end
   end
 
+  private
+
   def aged_brie
     decrease_days_remaining_by_one
     return if @quality &gt;= 50
@@ -139,18 +141,18 @@
     increase_quality_by_one if @days_remaining &lt; 5
   end
 
-  def normal<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 2 nodes</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L46" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L53" class="js-smell-location">1</a>                  </div>  </li></ol>
+  def normal<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 2 nodes</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L48" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L55" class="js-smell-location">1</a>                  </div>  </li></ol>
     decrease_days_remaining_by_one
     return if @quality == 0
-    decrease_quality_by(1)<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>GildedRose#normal calls 'decrease_quality_by(1)' 2 times</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L49" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L50" class="js-smell-location">1</a>                  </div>  </li></ol>
-    decrease_quality_by(1) if @days_remaining &lt;= 0<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>GildedRose#normal calls 'decrease_quality_by(1)' 2 times</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L49" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L50" class="js-smell-location">1</a>                  </div>  </li></ol>
+    decrease_quality_by(1)<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>GildedRose#normal calls 'decrease_quality_by(1)' 2 times</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L51" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L52" class="js-smell-location">1</a>                  </div>  </li></ol>
+    decrease_quality_by(1) if @days_remaining &lt;= 0<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>GildedRose#normal calls 'decrease_quality_by(1)' 2 times</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L51" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L52" class="js-smell-location">1</a>                  </div>  </li></ol>
   end
 
-  def conjured<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 2 nodes</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L46" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L53" class="js-smell-location">1</a>                  </div>  </li></ol>
+  def conjured<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="http://docs.seattlerb.org/flay/" target="_blank"><b>DuplicateCode</b></a>        </span>      </div>      <span>Similar code found in 2 nodes</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L48" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L55" class="js-smell-location">1</a>                  </div>  </li></ol>
     decrease_days_remaining_by_one
     return if @quality == 0
-    decrease_quality_by(2)<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>GildedRose#conjured calls 'decrease_quality_by(2)' 2 times</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L56" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L57" class="js-smell-location">1</a>                  </div>  </li></ol>
-    decrease_quality_by(2) if @days_remaining &lt;= 0<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>GildedRose#conjured calls 'decrease_quality_by(2)' 2 times</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L56" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L57" class="js-smell-location">1</a>                  </div>  </li></ol>
+    decrease_quality_by(2)<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>GildedRose#conjured calls 'decrease_quality_by(2)' 2 times</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L58" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L59" class="js-smell-location">1</a>                  </div>  </li></ol>
+    decrease_quality_by(2) if @days_remaining &lt;= 0<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden"true"=""></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>GildedRose#conjured calls 'decrease_quality_by(2)' 2 times</span>              <span>Locations:</span>                  <a href="lib/gilded_rose.html#L58" class="js-smell-location">0</a>                  <a href="lib/gilded_rose.html#L59" class="js-smell-location">1</a>                  </div>  </li></ol>
   end
 
   def decrease_days_remaining_by_one
