@@ -32,8 +32,8 @@ class GildedRose
     decrease_days_remaining_by_one
     return if @quality >= 50
 
-    @quality = @quality + 1
-    @quality = @quality + 1 if @days_remaining <= 0 and @quality < 50
+    increase_quality_by_one
+    increase_quality_by_one if @days_remaining <= 0 and @quality < 50
   end
 
   def backstage_pass
@@ -41,9 +41,9 @@ class GildedRose
     return if @quality >= 50
     return @quality = 0 if @days_remaining < 0
 
-    @quality = @quality + 1
-    @quality = @quality + 1 if @days_remaining <= 10
-    @quality = @quality + 1 if @days_remaining < 5
+    increase_quality_by_one
+    increase_quality_by_one if @days_remaining <= 10
+    increase_quality_by_one if @days_remaining < 5
   end
 
   def normal
@@ -64,5 +64,9 @@ class GildedRose
 
   def decrease_days_remaining_by_one
     @days_remaining -= 1
+  end
+
+  def increase_quality_by_one
+    @quality += 1
   end
 end
