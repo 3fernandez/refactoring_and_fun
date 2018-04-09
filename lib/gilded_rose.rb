@@ -29,7 +29,7 @@ class GildedRose
   end
 
   def aged_brie
-    @days_remaining = @days_remaining - 1
+    decrease_days_remaining_by_one
     return if @quality >= 50
 
     @quality = @quality + 1
@@ -37,7 +37,7 @@ class GildedRose
   end
 
   def backstage_pass
-    @days_remaining = @days_remaining - 1
+    decrease_days_remaining_by_one
     return if @quality >= 50
     return @quality = 0 if @days_remaining < 0
 
@@ -47,7 +47,7 @@ class GildedRose
   end
 
   def normal
-    @days_remaining = @days_remaining - 1
+    decrease_days_remaining_by_one
     return if @quality == 0
 
     @quality = @quality - 1
@@ -55,10 +55,14 @@ class GildedRose
   end
 
   def conjured
-    @days_remaining = @days_remaining - 1
+    decrease_days_remaining_by_one
     return if @quality == 0
 
     @quality = @quality - 2
     @quality = @quality - 2 if @days_remaining <= 0
+  end
+
+  def decrease_days_remaining_by_one
+    @days_remaining -= 1
   end
 end
