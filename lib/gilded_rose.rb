@@ -31,7 +31,6 @@ class GildedRose
   def aged_brie
     decrease_days_remaining_by_one
     return if @quality >= 50
-
     increase_quality_by_one
     increase_quality_by_one if @days_remaining <= 0 and @quality < 50
   end
@@ -40,7 +39,6 @@ class GildedRose
     decrease_days_remaining_by_one
     return if @quality >= 50
     return @quality = 0 if @days_remaining < 0
-
     increase_quality_by_one
     increase_quality_by_one if @days_remaining <= 10
     increase_quality_by_one if @days_remaining < 5
@@ -49,7 +47,6 @@ class GildedRose
   def normal
     decrease_days_remaining_by_one
     return if @quality == 0
-
     decrease_quality_by(1)
     decrease_quality_by(1) if @days_remaining <= 0
   end
@@ -57,7 +54,6 @@ class GildedRose
   def conjured
     decrease_days_remaining_by_one
     return if @quality == 0
-
     decrease_quality_by(2)
     decrease_quality_by(2) if @days_remaining <= 0
   end
