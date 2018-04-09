@@ -50,16 +50,16 @@ class GildedRose
     decrease_days_remaining_by_one
     return if @quality == 0
 
-    @quality = @quality - 1
-    @quality = @quality - 1 if @days_remaining <= 0
+    decrease_quality_by(1)
+    decrease_quality_by(1) if @days_remaining <= 0
   end
 
   def conjured
     decrease_days_remaining_by_one
     return if @quality == 0
 
-    @quality = @quality - 2
-    @quality = @quality - 2 if @days_remaining <= 0
+    decrease_quality_by(2)
+    decrease_quality_by(2) if @days_remaining <= 0
   end
 
   def decrease_days_remaining_by_one
@@ -68,5 +68,9 @@ class GildedRose
 
   def increase_quality_by_one
     @quality += 1
+  end
+
+  def decrease_quality_by(amount)
+    @quality -= amount
   end
 end
